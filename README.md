@@ -7,9 +7,7 @@ This project demonstrates agentic reasoning, tool selection, multimodal processi
 ---
 
 ## 📁 Project Structure
-
-<img width="530" height="265" alt="image" src="https://github.com/user-attachments/assets/e19ea6b7-e8e1-432b-8cdc-09a6cb6d026f" />
-
+<img width="539" height="317" alt="image" src="https://github.com/user-attachments/assets/f8ea767c-8d3f-4552-8469-c5e228a054af" />
 ---
 
 ## 📝 Customising Your Template
