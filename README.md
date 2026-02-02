@@ -59,10 +59,22 @@ The agent will automatically adapt to whatever structure you define.
 ```bash
 pip install -r requirement.txt
 ```
-2. Ollama (Required)
+### 2. Ollama (Required)
 This project uses local LLMs via Ollama (e.g., phi3, llama3.1).
 Install Ollama:
 https://ollama.com
 Start the server:
+```bash
+ollama serve
+```
+### 3. ffmpeg (Required for Whisper)
+Whisper requires ffmpeg to decode audio files.
+Install ffmpeg:
+- Windows (Chocolatey): `choco install ffmpeg`
+- macOS (Homebrew): `brew install ffmpeg`
+- Linux (APT): `sudo apt install ffmpeg`
+
+
+
 
 
