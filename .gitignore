@@ -1,0 +1,30 @@
+# Ignore virtual environment
+venv/
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# IDE / editor files
+.vscode/
+.idea/
+*.swp
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Output folder (optional)
+# Uncomment if you don't want generated markdown in the repo
+output/
+
+# Logs
+*.log
+
+# Environment files
+.env
