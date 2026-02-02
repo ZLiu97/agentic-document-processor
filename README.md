@@ -73,6 +73,8 @@ Install ffmpeg:
 - Windows (Chocolatey): `choco install ffmpeg`
 - macOS (Homebrew): `brew install ffmpeg`
 - Linux (APT): `sudo apt install ffmpeg`
+  
+---
 
 ## ▶️ Running the Agent
 
@@ -82,6 +84,42 @@ Add PDFs, images, or audio files to:
 ```
 documents/
 ```
+### 2. Ensure Ollama is running
+
+```bash
+ollama serve
+```
+### 3. Run your main script
+
+```bash
+python main.py
+```
+### 4. Provide a natural‑language instruction
+Example:
+```
+Process all documents using template.md and save the results.
+```
+
+---
+
+## 🧠 How the Agent Works
+- Task classification
+- File discovery
+- Tool selection (PDF, OCR, Whisper)
+- Text cleaning
+- Extraction using your `template.md`
+- Filename generation
+- Output saved to `output/`
+
+---
+## 📈 Future Improvements
+- Chunking for long documents
+- GPU acceleration
+- Caching repeated LLM calls
+
+
+
+
 
 
 
