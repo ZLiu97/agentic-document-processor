@@ -21,6 +21,7 @@ project-root/
 ├── template.md         # User-editable extraction template
 ├── dev_agent.ipynb     # Development notebook
 └── requirement.txt     # Python dependencies
+
 ---
 
 ## 📝 Customising Your Template
