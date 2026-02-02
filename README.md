@@ -74,6 +74,13 @@ Install ffmpeg:
 - macOS (Homebrew): `brew install ffmpeg`
 - Linux (APT): `sudo apt install ffmpeg`
 
+## ▶️ Running the Agent
+
+### 1. Place your documents
+
+Add PDFs, images, or audio files to:
+
+documents/
 
 
 
