@@ -21,7 +21,7 @@ Thumbs.db
 
 # Output folder (optional)
 # Uncomment if you don't want generated markdown in the repo
-output/
+# output/
 
 # Logs
 *.log
