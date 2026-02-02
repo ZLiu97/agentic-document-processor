@@ -7,8 +7,20 @@ This project demonstrates agentic reasoning, tool selection, multimodal processi
 ---
 
 ## 📁 Project Structure
-project-root/ │ ├── agent/ │   ├── config/ │   ├── core/ │   ├── readers/ │   ├── llm/ │   └── pipeline/ │ ├── documents/          # Input files (PDFs, images, audio) ├── output/             # Generated markdown files ├── template.md         # User-editable extraction template ├── dev_agent.ipynb     # Development notebook └── requirement.txt     # Python dependencies
-
+project-root/
+│
+├── agent/
+│   ├── config/
+│   ├── core/
+│   ├── readers/
+│   ├── llm/
+│   └── pipeline/
+│
+├── documents/          # Input files (PDFs, images, audio)
+├── output/             # Generated markdown files
+├── template.md         # User-editable extraction template
+├── dev_agent.ipynb     # Development notebook
+└── requirement.txt     # Python dependencies
 ---
 
 ## 📝 Customising Your Template
