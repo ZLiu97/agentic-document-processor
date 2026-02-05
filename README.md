@@ -1,0 +1,112 @@
+# AI Document Processing Agent
+
+A modular, agentic system for processing mixed‑format documents (PDFs, images, audio) using a **local LLM running on Ollama**. The agent extracts structured information using a user‑defined template and outputs clean, LLM‑generated markdown files.
+
+This project demonstrates agentic reasoning, tool selection, multimodal processing, and a production‑grade architecture for document understanding.
+
+---
+
+## 📁 Project Structure
+<img width="539" height="317" alt="image" src="https://github.com/user-attachments/assets/f8ea767c-8d3f-4552-8469-c5e228a054af" />
+
+---
+
+## 📝 Customising Your Template
+
+The file `template.md` defines **what information the agent extracts** and **how the final markdown output is structured**.
+
+You can freely modify this file to match your needs:
+
+- Add or remove fields  
+- Change headings  
+- Adjust formatting  
+- Create domain‑specific extraction layouts (finance, legal, HR, insurance, etc.)
+
+The agent will automatically adapt to whatever structure you define.
+
+---
+
+## 🚀 Features
+
+- Natural‑language task control  
+- Automatic file discovery in `documents/`  
+- LLM‑driven tool selection (PDF reader, OCR, Whisper)  
+- Text cleaning pipeline for OCR/transcription noise  
+- Template‑based extraction using your customised `template.md`  
+- Smart filename generation  
+- Concurrent processing  
+- Modular, extensible architecture  
+
+---
+
+## ⚙️ Requirements
+
+### 1. Python Dependencies
+
+```bash
+pip install -r requirement.txt
+```
+### 2. Ollama (Required)
+This project uses local LLMs via Ollama (e.g., phi3, llama3.1).
+Install Ollama:
+https://ollama.com
+Start the server:
+```bash
+ollama serve
+```
+### 3. ffmpeg (Required for Whisper)
+Whisper requires ffmpeg to decode audio files.
+Install ffmpeg:
+- Windows (Chocolatey): `choco install ffmpeg`
+- macOS (Homebrew): `brew install ffmpeg`
+- Linux (APT): `sudo apt install ffmpeg`
+  
+---
+
+## ▶️ Running the Agent
+
+### 1. Place your documents
+
+Add PDFs, images, or audio files to:
+```
+documents/
+```
+### 2. Ensure Ollama is running
+
+```bash
+ollama serve
+```
+### 3. Run your main script
+
+```bash
+python main.py
+```
+### 4. Provide a natural‑language instruction
+Example:
+```
+Process all documents using template.md and save the results.
+```
+
+---
+
+## 🧠 How the Agent Works
+- Task classification
+- File discovery
+- Tool selection (PDF, OCR, Whisper)
+- Text cleaning
+- Extraction using your `template.md`
+- Filename generation
+- Output saved to `output/`
+
+---
+## 📈 Future Improvements
+- Chunking for long documents
+- GPU acceleration
+- Caching repeated LLM calls
+
+
+
+
+
+
+
