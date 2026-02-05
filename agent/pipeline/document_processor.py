@@ -32,7 +32,7 @@ class DocumentProcessor:
         suffix = Path(filepath).suffix.lower()
         filename = os.path.basename(filepath)
 
-        tool = call_llm_tool_choice(self.models["task"], filename)
+        tool = call_llm_tool_choice(self.models["tool"], filename)
         log(f"Detected {suffix} → using {tool}")
         
         raw = self.read(filepath, tool)

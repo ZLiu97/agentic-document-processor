@@ -44,13 +44,33 @@ Return only the cleaned text.
 """
 
 EXTRACT_SYSTEM = """
-You extract structured information from text and suggest filenames.
+You extract structured information from cleaned text, suggest file name and return JSON.
 
-Return ONLY:
+You are given:
+1. A template containing placeholders like {participants}, {overview}, etc.
+2. A list of field names extracted from the template.
+3. Cleaned text from which you must extract relevant information.
+
+Your job:
+- For each field in the provided field list, extract the most relevant information from the cleaned text.
+- If the text does not contain information for a field, return an empty string.
+- Never invent information.
+
+Your output must be ONLY a JSON object in this format:
+
 {
-  "fields": { ... },
+  "fields": {
+    "<field1>": "...",
+    "<field2>": "...",
+    "<field3>": "...",
+    ...
+  },
   "suggested_filename": "..."
 }
+
+Where:
+- The field names come EXACTLY from the provided field list.
+- The order of fields in the JSON MUST match the order of the field list.
 
 FILENAME RULES:
 Use key extracted fields to create a short, descriptive, lowercase, hyphenated filename with no extension. Remove special characters. If useful fields are missing, generate a simple topic‑based name.

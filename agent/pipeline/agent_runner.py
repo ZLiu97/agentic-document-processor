@@ -15,18 +15,20 @@ class AgentRunner:
         self.max_workers = max_workers
 
     def run(self, documents_dir: str, instruction: str):
-        task = interpret_task(self.models["task"], instruction)
-
-        if not task["should_process"]:
-            log("Instruction does not request document processing.")
-            return
-
-        files = list_files(documents_dir)
-        log(f"Found {len(files)} files")
-
-        processor = DocumentProcessor(self.models, self.template, self.output_dir)
-
-        with ThreadPoolExecutor(max_workers=self.max_workers) as ex:
-            futures = [ex.submit(processor.process, f, task["task_description"]) for f in files]
-            for fut in futures:
-                fut.result()
+    
+        while True:
+            task = interpret_task(self.models["task"], instruction)
+            if not task["should_process"]:
+                log("Instruction does not request document processing.")
+                instruction = input("Your prompt\n> ")
+            else:
+                files = list_files(documents_dir)
+                log(f"Found {len(files)} files")
+        
+                processor = DocumentProcessor(self.models, self.template, self.output_dir)
+        
+                with ThreadPoolExecutor(max_workers=self.max_workers) as ex:
+                    futures = [ex.submit(processor.process, f, task["task_description"]) for f in files]
+                    for fut in futures:
+                        fut.result()
+                break

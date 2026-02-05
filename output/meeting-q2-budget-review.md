@@ -1,13 +1,13 @@
 # Meeting Summary
 
 ## Participants: 
-Olivia, Marcus, Jonathan
+Olivia Marcus, Jonathan
 
 ### Overview
-Finance noted rising vendor costs; Operations suggest exploring internal resources to reduce spending.
+Finance noted rising vendor costs operations suggest exploring internal resources to reduce spending leadership requests updated forecasts
 
 ### Key Points
-Key outcomes: draft revised Q2 budget, assess workload migrations, check vendor contract terms.
+draft revised Q2 budget assess workload migrations check vendor contract terms action items reveal infrastructure cost options
 
 ### Next Steps
-Leadership requests updated forecasts. Olivia to update the forecast and Jonathan to arrange vendor discussions.
+Olivia update the forecast Jonathan arrange vendor discussions
